@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Empresa</title>
+</head>
+<body>
+
+<h1>Sistema de Empresa</h1>
+
+<h2>1. Crear Departamento</h2>
+<input type="text" id="nombreDep" placeholder="Nombre del departamento">
+<button onclick="crearDepartamento()">Crear</button>
+
+<h2>2. Agregar Empleado</h2>
+<input type="text" id="nombreEmp" placeholder="Nombre">
+<input type="text" id="puestoEmp" placeholder="Puesto">
+<input type="text" id="depEmp" placeholder="Departamento">
+<button onclick="agregarEmpleado()">Agregar</button>
+
+<h2>3. Mostrar Empresa</h2>
+<button onclick="mostrarEmpresa()">Mostrar</button>
+
+<div id="salida"></div>
+
+
+
+    <script src="../JS/Empleado.js"></script>
+    <script src="../JS/Departamento.js"></script>
+    <script src="../JS/Empresa.js"></script>
+
+</body>
+</html>
