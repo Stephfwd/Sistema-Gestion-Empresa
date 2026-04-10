@@ -1,10 +1,11 @@
 class Empleado {
-    constructor(nombre, puesto) {
+    constructor(id, nombre, puesto) {
+        this.id = id;
         this.nombre = nombre;
         this.puesto = puesto;
     }
 
-    mostrarInfo() {
-        return `Nombre: ${this.nombre} | Puesto: ${this.puesto}`;
+    mostrarEmpleado() {
+        console.log(`Empleado: ${this.nombre}, Puesto: ${this.puesto}`);
     }
 }

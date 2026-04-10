@@ -1,22 +1,21 @@
 class Departamento {
-    constructor(nombre, empleados = []) {
+    constructor(id, nombre, trabajadores = []) {
+        this.id = id;
         this.nombre = nombre;
-        this.empleados = empleados;
+        this.trabajadores = trabajadores;
     }
 
-    agregarEmpleado(empleado) {
-        this.empleados.push(empleado);
-        console.log("Empleado agregado con exito");
+    agregarTrabajador(trabajador) {
+        this.trabajadores.push(trabajador);
+        console.log("Trabajador agregado (en memoria)");
     }
 
-    mostrarEmpleados() {
-        let resultado = `Departamento: ${this.nombre}\n`;
-        resultado += "Empleados:\n";
+    mostrarTrabajadores() {
+        console.log(`Departamento: ${this.nombre}`);
+        console.log('Trabajadores:');
 
-        this.empleados.forEach(emp => {
-            resultado += `- ${emp.nombre} (${emp.puesto})\n`;
+        this.trabajadores.forEach(trabajador => {
+            console.log(`- ${trabajador.nombre}`);
         });
-
-        return resultado;
     }
 }
