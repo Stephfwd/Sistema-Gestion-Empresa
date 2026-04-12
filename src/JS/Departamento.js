@@ -7,7 +7,7 @@ class Departamento {
 
     agregarTrabajador(trabajador) {
         this.trabajadores.push(trabajador);
-        console.log("Trabajador agregado (en memoria)");
+        console.log("Trabajador agregado con exito");
     }
 
     mostrarTrabajadores() {

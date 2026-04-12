@@ -33,8 +33,84 @@
           "empleados": []
         }
       ]
+    },
+    {
+      "nombre": "Red Bull",
+      "departamentos": [
+        {
+          "nombre": "Diseño",
+          "empleados": []
+        },
+        {
+          "nombre": "Marketing",
+          "empleados": []
+        },
+        {
+          "nombre": "Gerente",
+          "empleados": []
+        }
+      ]
+    },
+    {
+      "nombre": "Mi Gran Empresa S.A.",
+      "departamentos": [
+        {
+          "nombre": "Ventas",
+          "empleados": [
+            {
+              "nombre": "Carlos",
+              "puesto": ""
+            },
+            {
+              "nombre": "Luis",
+              "puesto": ""
+            }
+          ]
+        },
+        {
+          "nombre": "IT",
+          "empleados": [
+            {
+              "nombre": "Ana",
+              "puesto": ""
+            }
+          ]
+        }
+      ]
     }
   ],
-  "Departamentos": [],
-  "Empleados": []
+  "Departamentos": [
+    {
+      "nombre": "Recursos Humanos",
+      "empleados": []
+    }
+  ],
+  "Empleados": [
+    {
+      "nombre": "Juan Pérez",
+      "puesto": "Gerente de Ventas"
+    }
+  ],
+  "Roles": [
+    {
+      "id": "1",
+      "nombre": "Administrador",
+      "descripcion": "Acceso total al sistema"
+    },
+    {
+      "id": "2",
+      "nombre": "Recursos Humanos",
+      "descripcion": "Gestión de empleados y departamentos"
+    },
+    {
+      "id": "3",
+      "nombre": "Gerente",
+      "descripcion": "Supervisor de un departamento específico"
+    },
+    {
+      "id": "4",
+      "nombre": "Empleado Regular",
+      "descripcion": "Acceso básico de lectura e información personal"
+    }
+  ]
 }
