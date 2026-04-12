@@ -1,0 +1,40 @@
+{
+  "Empresa": [
+    {
+      "nombre": "Red Bull",
+      "departamentos": [
+        {
+          "nombre": "Diseño",
+          "empleados": []
+        },
+        {
+          "nombre": "Marketing",
+          "empleados": []
+        },
+        {
+          "nombre": "Gerente",
+          "empleados": []
+        }
+      ]
+    },
+    {
+      "nombre": "Red Bull",
+      "departamentos": [
+        {
+          "nombre": "Diseño",
+          "empleados": []
+        },
+        {
+          "nombre": "Marketing",
+          "empleados": []
+        },
+        {
+          "nombre": "Gerente",
+          "empleados": []
+        }
+      ]
+    }
+  ],
+  "Departamentos": [],
+  "Empleados": []
+}

@@ -1,32 +1,40 @@
-const Empleado = require('../models/Empleado');
+const fs = require('fs');
+const path = require('path');
+const Empleado = require('../Models/Empleado');
 
-// simulación de almacenamiento en memoria
-let empleados = [];
+// Ruta al archivo db.json
+const dbPath = path.join(__dirname, '../db.json');
 
+// Leer los datos del archivo db.json
+function leerDB() {
+    const datos = fs.readFileSync(dbPath, 'utf-8');
+    return JSON.parse(datos);
+}
 
-// Controlador para crear un nuevo empleado
+// Guardar los datos en el archivo db.json
+function guardarDB(datos) {
+    fs.writeFileSync(dbPath, JSON.stringify(datos, null, 2));
+}
 
+// Crear empleado
 exports.crearEmpleado = (req, res) => {
     const { nombre, puesto } = req.body;
 
     const nuevoEmpleado = new Empleado(nombre, puesto);
 
-    // simulamos inserción de datos
-    empleados.push(nuevoEmpleado);
+    // Leer db.json, agregar el empleado y guardar
+    const db = leerDB();
+    db.Empleados.push(nuevoEmpleado);
+    guardarDB(db);
 
-    res.status(201).json({
-        message: 'Empleado creado exitosamente',
-        empleado: nuevoEmpleado
+    res.json({
+        mensaje: "Empleado creado y guardado",
+        data: nuevoEmpleado
     });
 };
 
-
-
-
-// Controlador para obtener todos los empleados
-
+// Obtener todos los empleados
 exports.obtenerEmpleados = (req, res) => {
-
-    // se devuelve la lista de empleados
-    res.json(empleados);
+    const db = leerDB();
+    res.json(db.Empleados);
 };

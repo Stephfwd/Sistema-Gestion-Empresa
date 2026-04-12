@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const departamentoController = require('../Controllers/DepartamentoControler');
+const {
+    crearDepartamento,
+    obtenerDepartamentos
+} = require('../Controllers/DepartamentoController');
 
-
-
-router.get("/empresa", departamentoController.obtenerEmpresa);
-router.get("/departamentos", departamentoController.obtenerDepartamentos);
-router.get("/empleados", departamentoController.obtenerEmpleados);
+router.post('/', crearDepartamento);
+router.get('/', obtenerDepartamentos);
 
 module.exports = router;

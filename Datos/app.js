@@ -1,23 +1,28 @@
 const express = require('express');
 const app = express();
 
-// importante para manejar JSON
+// Middleware para leer JSON
 app.use(express.json());
 
-// importar rutas
+// Importar rutas
+const empresaRoutes = require('./Routes/EmpresaRoutes');
 const departamentoRoutes = require('./Routes/DepartamentoRoutes');
 const empleadoRoutes = require('./Routes/EmpleadoRoutes');
-const empresaRoutes = require('./Routes/EmpresaRoutes');
 
-// usar rutas
-app.use('/api', departamentoRoutes);
-app.use('/api/empleados', empleadoRoutes);
+// Usar rutas
 app.use('/api/empresa', empresaRoutes);
+app.use('/api/departamentos', departamentoRoutes);
+app.use('/api/empleados', empleadoRoutes);
 
-// puerto
+// Ruta de prueba
+app.get('/', (req, res) => {
+    res.send('API de Gestión de Empresa funcionando 🚀');
+});
+
+// Puerto
 const PORT = 3000;
 
-// levantar servidor
+// Levantar servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

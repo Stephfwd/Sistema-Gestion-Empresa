@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const empleadoController = require('../Controllers/EmpleadoController');
+const {
+    crearEmpleado,
+    obtenerEmpleados
+} = require('../Controllers/EmpleadoController');
 
-
-router.get("/", empleadoController.obtenerEmpleados);
+router.post('/', crearEmpleado);
+router.get('/', obtenerEmpleados);
 
 module.exports = router;

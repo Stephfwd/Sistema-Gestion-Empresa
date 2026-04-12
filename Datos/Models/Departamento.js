@@ -1,7 +1,11 @@
 class Departamento {
-    constructor(nombre, empleados = []) {
+    constructor(nombre) {
         this.nombre = nombre;
-        this.empleados = empleados;
+        this.empleados = [];
+    }
+
+    agregarEmpleado(empleado) {
+        this.empleados.push(empleado);
     }
 }
 

@@ -1,7 +1,11 @@
 class Empresa {
-    constructor(nombre, departamentos = []) {
+    constructor(nombre) {
         this.nombre = nombre;
-        this.departamentos = departamentos;
+        this.departamentos = [];
+    }
+
+    agregarDepartamento(departamento) {
+        this.departamentos.push(departamento);
     }
 }
 
